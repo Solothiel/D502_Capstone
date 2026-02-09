@@ -8,8 +8,8 @@ os.makedirs("data", exist_ok=True)
 
 
 # Save Encoders
-joblib.dump(scaler, "data/scaler.pk1")
-joblib.dump(best_model, "data/best_model.pk1")
+joblib.dump(scaler, "data/scaler.pkl")
+joblib.dump(best_model, "data/best_model.pkl")
 
 
 

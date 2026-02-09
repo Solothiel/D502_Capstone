@@ -12,7 +12,7 @@ for col in categorical_cols:
     le = LabelEncoder()
     df_encode[col] = le.fit_transform(df_encode[col])
 
-    joblib.dump(le, f"data/{col}_encoder.pk1")
+    joblib.dump(le, f"data/{col}_encoder.pkl")
 
 X = df_encode.drop(columns={'customer_id', 'loan_status'})
 y = df_encode['loan_status']
