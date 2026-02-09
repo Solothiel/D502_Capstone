@@ -17,3 +17,6 @@ for col in categorical_cols:
 X = df_encode.drop(columns={'customer_id', 'loan_status'})
 y = df_encode['loan_status']
 
+
+feature_names = X.columns.tolist()
+joblib.dump(feature_names, "data/feature_names.pkl")

@@ -7,3 +7,4 @@ scaler = joblib.load('scaler.pkl')
 categorical_cols = ['occupation_status', 'product_type', 'loan_intent']
 encoders = {col: joblib.load(f'{col}_encoder.pkl') for col in categorical_cols}
 
+feature_names = joblib.load("data/feature_names.pkl")

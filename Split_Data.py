@@ -1,3 +1,4 @@
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from Preprocessing import X, y
@@ -12,5 +13,7 @@ scaler = StandardScaler()
 X_train_scale = scaler.fit_transform(X_train)
 X_test_scale = scaler.fit_transform(X_test)
 
+feature_means = X_train.mean().to_dict()
 
+joblib.dump(feature_means, "data/feature_means.pkl")
 
