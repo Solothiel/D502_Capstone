@@ -20,8 +20,6 @@ results_df['Overall_score'] = sum(results_df[m] * w for m, w in weights.items())
 best_model_name = results_df.sort_values("Overall_score", ascending = False).iloc[0]["Model"]
 best_model = trained_model[best_model_name]
 
-# saves the best model
-joblib.dump(best_model, 'best_model.pk1')
 
 #return results
 overall_score = results_df.loc[results_df['Model'] == best_model_name, "Overall_score"].values[0]
