@@ -25,12 +25,12 @@ def main():
     # Evaluate models
     results_df = evaluate_models(
         trained_models,
-        X_train_scaled=X_train_scaled,
-        X_test_scaled=X_test_scaled,
-        y_train=y_train,
-        y_test=y_test,
-        X_train_raw=X_train,
-        X_test_raw=X_test
+        X_train_scaled,
+        X_test_scaled,
+        y_train,
+        y_test,
+        X_train_raw=X_train_scaled,
+        X_test_raw=X_test_scaled
     )
     print("\nModel Evaluation Results:")
     print(results_df)
