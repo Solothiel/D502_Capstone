@@ -14,7 +14,7 @@ def preview_data(df: pd.DataFrame) -> None:
 
 
 if __name__ == "__main__":
-    path = r"C:\Users\masdr\PycharmProjects\D502 Capstone\Data\Loan_approval_data_2025.csv"
+    path = r"/Data/Loan_approval_data_2025.csv"
     loan_df = load_data(path)
     preview_data(loan_df)
 
