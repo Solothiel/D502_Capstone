@@ -63,23 +63,27 @@ system based on metrics like Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
 ## How to Run
 
 1. Clone the repository:
-    bash
+    
+`bash`
 
     `git clone <>`
     `cd loan_project`
 
 2. Install dependencies:
-    bash
+
+`bash`
 
     `pip install -r requirements.txt`
 
 3. Run the Pipeline:
-    bash
+
+`bash`
 
     `python D502_capstone/main.py`
 
 4. Optional: Run tests with pytest:
-    bash
+
+`bash`
 
     `pytest tests/`
 
