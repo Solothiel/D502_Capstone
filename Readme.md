@@ -125,3 +125,26 @@ loan_project/
 ├── requirements.txt
 └── README.md
 ```
+
+### Model Evaluation Results 
+```
+Model Evaluation Results:
+                 Model  Accuracy  Precision    Recall  F1-Score   ROC-AUC
+0  Logistic Regression    0.8463   0.851404  0.872337  0.861743  0.929275
+1        Decision Tree    0.8749   0.885455  0.886906  0.886180  0.873593
+2        Random Forest    0.9163   0.923399  0.924240  0.923819  0.974367
+
+```
+
+### Hypothesis Testing: Model vs. Baseline
+```
+Hypothesis Testing: Model vs Baseline
+Logistic Regression -- Accuracy: 0.85, F1: 0.86, ROC-AUC: 0.93
+McNemar test p-value=0.0000 → Reject H0
+
+Decision Tree -- Accuracy: 0.87, F1: 0.89, ROC-AUC: 0.87
+McNemar test p-value=0.0000 → Reject H0
+
+Random Forest -- Accuracy: 0.92, F1: 0.92, ROC-AUC: 0.97
+McNemar test p-value=0.0000 → Reject H0
+```
