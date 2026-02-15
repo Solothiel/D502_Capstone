@@ -2,8 +2,8 @@
 
 ## Project Overview
 
-    This project predicts whether a loan application will be approved based on 
-    customer features such as:
+This project predicts whether a loan application will be approved based on 
+customer features such as:
 
 * Occupation status
 * Product type
@@ -11,10 +11,9 @@
 * Other demographic and financial variables
 
 
-
-    The project compares multiple machine learning models (Logistic 
-    Regression, Decision Tree, Random Forest) and selects the best model using a weighted scoring 
-    system based on metrics like Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
+The project compares multiple machine learning models (Logistic 
+Regression, Decision Tree, Random Forest) and selects the best model using a weighted scoring 
+system based on metrics like Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
 
 ## Null Hypothesis
 
@@ -33,69 +32,56 @@
 
 ## Project Pipeline
 
-    1. #### Data Loading (~ data_loader.py~)
+1. Data Loading (`data_loader.py`)
+   * Loads the loan dataset (`Loan_approval_data_2025.csv`)
+   * Provides a preview of data, column info, and target distribution
 
-        * Loads the loan dataset (~ Loan_approval_data_2025.csv~)
+2. Preprocessing (`preprocessing.py`)
+   * Encodes categorical features using LabelEncoder
+   * Creates feature matrix X and target y
 
-        * rovides a preview of data, column info, and target distribution
+3. Data Splitting & Scaling (`split_data.py`)
+   * Splits dataset into train/test (80/20)
+   * Standardizes features using StandardScaler
 
-    2. #### Preprocessing (~ preprocessing.py~)
+4. Model Training  (`train_models.py`)
+   * Defines Logistic Regression, Decision Tree, Random Forest
+   * Trains models on scaled training data
 
-        * Encodes categorical features using LabelEncoder
+5. Model Evaluation (`model_evaluator.py`)
+   * Computes Accuracy, Precision, Recall, F1-Score, ROC-AUC
+   * Evaluates all models on consistent scaled arrays
 
-        * Creates feature matrix X and target y
+6. Visualization (`visualize_results.py`)
+   * Generates bar plots comparing metrics across models
 
-    3. #### Data Splitting & Scaling (~split_data.py~)
-
-        * Splits dataset into train/test (80/20)
-
-        * Standardizes features using StandardScaler
-
-    4. #### Model Training  (~ train_models.py~)
-
-        * Defines Logistic Regression, Decision Tree, Random Forest
-
-        * Trains models on scaled training data
-
-    5. #### Model Evaluation (~ model_evaluator.py~)
-
-        * Computes Accuracy, Precision, Recall, F1-Score, ROC-AUC
-
-        * Evaluates all models on consistent scaled arrays
-
-    6. #### Visualization (~ visualize_results.py~)
-
-        * Generates bar plots comparing metrics across models
-
-    7. #### Best Model Selection (~ select_best_model.py~)
-
-        * Computes weighted overall score across metrics
-
-        * Selects the best-performing model
+7. Best Model Selection (`select_best_model.py`)
+   * Computes weighted overall score across metrics
+   * Selects the best-performing model
 
 
 ## How to Run
 
-    1. Clone the repository:
-        bash
+1. Clone the repository:
+    bash
 
-        ~ git clone <>~
-        ~ cd loan_project~
+    `git clone <>`
+    `cd loan_project`
 
-    2. Install dependencies:
-        bash
+2. Install dependencies:
+    bash
 
-        ~ pip install -r requirements.txt ~
+    `pip install -r requirements.txt`
 
-    3. Run the Pipeline:
-        bash
+3. Run the Pipeline:
+    bash
 
-        ~ python D502_capstone/main.py~
+    `python D502_capstone/main.py`
 
-    4. Optional: Run tests with pytest:
-        bash
+4. Optional: Run tests with pytest:
+    bash
 
-    ~ pytest tests/~
+    `pytest tests/`
 
 
 
@@ -107,11 +93,12 @@
 * matplotlib~=3.10.8
 * seaborn~=0.13.2
 * pytest~=9.0.2
-        
+      
 
 ## Project Structure 
-
+```
 loan_project/
+
 ├── app/
 │   ├── data_loader.py
 │   ├── preprocessing.py
@@ -133,3 +120,4 @@ loan_project/
 ├── main.py
 ├── requirements.txt
 └── README.md
+```
